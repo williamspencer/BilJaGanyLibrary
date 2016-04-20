@@ -5,6 +5,25 @@ public class Book {
 		private String title;
 		private String lastName;
 		private String firstName;
+		
+		public void printTitle(){
+			System.out.println(getTitle());
+		}
+		public String getTitle() {
+			return title;
+		}
+		public String getLastName() {
+			return lastName;
+		}
+		public String getFirstName() {
+			return firstName;
+		}
+		public String getGenre() {
+			return genre;
+		}
+		public String getCheckOut() {
+			return checkOut;
+		}
 		private String genre;
 		private String checkOut;
 		

@@ -29,7 +29,7 @@ Reference,Popular Karaoke,Aisha,Blake,false
 Reference,How To Behave,Ian,Washington,false
 Reference,Street Tactics,Bill,Spencer,false
 Reference,Trappin 101,Bill,Spencer,false
-ReferNonfiction,Running around and Getting It,James,Kelly,false
+Reference,Running around and Getting It,James,Kelly,false
 Nonfiction,From the Block the Boardroom,James,Kelly,false
 Nonfiction,It is Truly Hard Out Here for a Pimp,James,Kelly,true
 Nonfiction,If you Ain't Got No Haters You Ain't Poppin,Rico,Richie,false 
@@ -49,17 +49,30 @@ Childrens,Am I supposed to Watch Myself,North,West,false
 Childrens,Is Momma a Movie Start,North,West,true
 Childrens,How to Slay,BlueIvy,Carter,true
 Childrens,I am Not My Hair,BlueIvy,Carter,false
+<<<<<<< HEAD
 Childrens,Why My Mama Do That,RobbyBob,Swanson,false
 Childrens,My First Shotgun,RobbyBob,Swanson,false
 Childrens,Them Dishes Ain't GonnaWash Themselves,RobbyBob,Swanson,false
 Childrens,How to Read for Points,Jay,Watts,false
 Fiction,Bands Madeth Thouest Dance,Othello,Juicy,false
 Fiction,Thouest Whench Is Mine,Othello,Juicy,false
+=======
+Childrens,Why My Mama Do That,RobbyBob,Swanson, false
+Childrens,My First Shotgun,RobbyBob,Swanson,false
+Childrens,Them Dishes Ain't GonnaWash Themselves,RobbyBob,Swanson,false
+Childrens,How to Read for Points,Jay,Watts, false
+Fiction,Bands Madeth Thouest Dance,Othello,Juicy, false
+Fiction,Thouest Whench Is Mine,Othello,Juicy,true
+>>>>>>> 3287deda1b7b7912774da7a4a152bc4ab58deba1
 Fiction,My Presidency,Donald,Trump,false
 Fiction,I am a Honest American,Donald,Trump,false
 Fiction,Knucketh if Thouest Bucketh,Othello,Juicy,false
 Fiction,Space Amazonians,Neva,Salty,false
+<<<<<<< HEAD
 Fiction,He Took My Seasoning with my Heart,Neva Salty,false
+=======
+Fiction,He Took My Seasoning with my Heart,Neva,Salty,false
+>>>>>>> 3287deda1b7b7912774da7a4a152bc4ab58deba1
 Fiction,The Thirst that Consumed Me,Neva,Salty,false
 Fiction,The Bluest Eye,Toni,Morisson,false
 Fiction,Home,Toni,Morisson,true
@@ -93,4 +106,3 @@ Reference,MLA Writing Guide,Important,Writer,true
 Reference,Business Law,Important,Lawyer,false
 Reference,Gardening A to Z,Saresa,Smith,true
 Reference,How to be good at Everything,James,Kelly,false
-
