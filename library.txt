@@ -1,1 +1,66 @@
-genre,title,firstname,lastname
+Fiction,Ulysses,James,Joyce,false
+Fiction,American Psycho,Brett,Easton-Ellis,false
+Fiction,Vineland,Thomas,Pynchon,false
+Fiction,Life: A User's Manual,Georges,Perec,false
+Fiction,A Long Project,Will,Spencer,false
+Fiction,Tedious,Jay,Kelley,false
+Fiction,Fifty Shades of Jay,Jay,Watt,true
+Fiction,Ride Or Die,Dee,Emex,true
+Nonfiction,Boughetto: An Autobiography,Jay,Watt,false
+Nonfiction,My Life,Jesus,Christ,false
+Nonfiction,It Is Like So Easy,Doctor,Kamel,true
+Nonfiction,Just Google It,Doctor,Kamel,false
+Nonfiction,Started From The Bottom,Greg,Allday,false
+Nonfiction,The Game Remain The Same,Greg,Allday,true
+Nonfiction,Huntin' & Stuntin',Dick,Dieterle,false
+Nonfiction,Boss Moves,Jeseekia,Vaughn,,false
+Childrens,Power Stances,Kim,Driscoll,false
+Childrens,How To Disappear in America,Calvin,Harris,true
+Childrens,The Aalphabet,Aaron,Wolff,false
+Childrens,The Chioke Doctrine,Chioke,M.T,false
+Childrens,Double Agent,Trevon,Thomas,false
+Childrens,Cool Beans!!,Saresa,Smith,false
+Childrens,Super Dad,Jason,Scott,false
+Childrens,Theater For Kids,Mahogany,Yancey,false
+Reference,Data Mining,Celena,Mancina,false
+Reference,How To Run A Million Dollar BEAST,Damien,Rocchi,true
+Reference,The Backend,Maurice,Tedder,false
+Reference,Popular Karaoke,Aisha,Blake,false
+Reference,How To Behave,Ian,Washington,false
+Reference,Street Tactics,Bill,Spencer,false
+Reference,Trappin 101,Bill,Spencer,false
+Reference,Protect Your Neck,Danielle,Hall,true
+Fiction,The Bluest Eye,Toni,Morisson,false
+Fiction,Home,Toni,Morisson,true
+Fiction,Mean Girls Do Better,Momo,Yanze false
+Fiction,I be Clachet,Jay,Watt,true
+Fiction,Serious Tome,Pretentious,Writer,false
+Fiction,The Bell Jar,Slyvia,Plath,true
+Fiction,The Runaway Jury,John,Grisham,false
+Fiction,Run hard not fast,Bill,Spencer,true
+Nonfiction,I went to Asia and didnt tell nobody,Calvin,Harris,false
+Nonfiction,True Confessions of an Uber Driver,Alex,Marks, true
+Nonfiction,How to be ghetto without trying too hard,Momo,Yanze,true
+Nonfiction,The ABCs of Coding,Kamel,ItssoEasy,false
+Nonfiction,How to Get Away With Murder in TV,Shonda,Rhimes,true
+Nonfiction,Im the most famous person in the world really tho,Kanye,West,false
+Nonfiction,My parents screwed me up really tho,North,West,true
+Nonfiction,Its not easy being breezy,Kim,Driscoll,false
+Childrens,Green Eggs and Hame,Dr,Seuss,true
+Childrens,Speak when Spoken to,Momo,Yanze,false
+Childrens,Cow Moon Duck,Kamel,ItssoEasy,true
+Childrens,Where the Wild things are,Maurice,Sendak,false
+Childrens,Matilda,Roald,Dahl,true
+Childrens,The Cat in the Hat,Dr,Seuss,false
+Childrens,Its not easy being green,Kermit,TheFrog,true
+Childrens,Ameilia Bedelia,Peggy,Parish,true
+Reference,CodeSchool for Dummies,Momo,Yanze,false
+Reference,Politics in the age of Rebellion,Barack,Obama,true
+Reference,How to go to Asia without telling nobody,Calvin,Harris,true
+Reference,Codein and Commas: A how to guide,Future,Rapper,false
+Reference,MLA Writing Guide,Important,Writer,true
+Reference,Business Law,Important,Lawyer,false
+Reference,Gardening A to Z,Saresa,Smith,true
+Reference,How to be good at Everything,James,Kelly,false
+
+
