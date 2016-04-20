@@ -13,7 +13,7 @@ Nonfiction,Just Google It,Doctor,Kamel,false
 Nonfiction,Started From The Bottom,Greg,Allday,false
 Nonfiction,The Game Remain The Same,Greg,Allday,true
 Nonfiction,Huntin' & Stuntin',Dick,Dieterle,false
-Nonfiction,Boss Moves,Jeseekia,Vaughn,,false
+Nonfiction,Boss Moves,Jeseekia,Vaughn,false
 Childrens,Power Stances,Kim,Driscoll,false
 Childrens,How To Disappear in America,Calvin,Harris,true
 Childrens,The Aalphabet,Aaron,Wolff,false
@@ -47,30 +47,30 @@ Reference,A Guide to Stepping Your Game Up,Cookie,Stevens,true
 Reference,Empire Encyclopedia,Cookie,Stevens,false
 Childrens,Am I supposed to Watch Myself,North,West,false
 Childrens,Is Momma a Movie Start,North,West,true
-Childrens,How to Slay,BlueIvy,Carter,,true
+Childrens,How to Slay,BlueIvy,Carter,true
 Childrens,I am Not My Hair,BlueIvy,Carter,false
-Childrens,Why My Mama Do That,RobbyBob,Swanson
+Childrens,Why My Mama Do That,RobbyBob,Swanson,false
 Childrens,My First Shotgun,RobbyBob,Swanson,false
 Childrens,Them Dishes Ain't GonnaWash Themselves,RobbyBob,Swanson,false
-Childrens,How to Read for Points,Jay,Watts
-Fiction,Bands Madeth Thouest Dance,Othello,Juicy
-Fiction,Thouest Whench Is Mine,Othello,Juicy
-Fiction,My Presidency,Donald,Trump
-Fiction,I am a Honest American,Donald,Trump
-Fiction,Knucketh if Thouest Bucketh,Othello,Juicy
-Fiction,Space Amazonians,Neva,Salty
-Fiction,He Took My Seasoning with my Heart,Neva Salty
-Fiction,The Thirst that Consumed Me,Neva,Salty
+Childrens,How to Read for Points,Jay,Watts,false
+Fiction,Bands Madeth Thouest Dance,Othello,Juicy,false
+Fiction,Thouest Whench Is Mine,Othello,Juicy,false
+Fiction,My Presidency,Donald,Trump,false
+Fiction,I am a Honest American,Donald,Trump,false
+Fiction,Knucketh if Thouest Bucketh,Othello,Juicy,false
+Fiction,Space Amazonians,Neva,Salty,false
+Fiction,He Took My Seasoning with my Heart,Neva Salty,false
+Fiction,The Thirst that Consumed Me,Neva,Salty,false
 Fiction,The Bluest Eye,Toni,Morisson,false
 Fiction,Home,Toni,Morisson,true
-Fiction,Mean Girls Do Better,Momo,Yanze false
+Fiction,Mean Girls Do Better,Momo,Yanze,false
 Fiction,I be Clachet,Jay,Watt,true
 Fiction,Serious Tome,Pretentious,Writer,false
 Fiction,The Bell Jar,Slyvia,Plath,true
 Fiction,The Runaway Jury,John,Grisham,false
 Fiction,Run hard not fast,Bill,Spencer,true
 Nonfiction,I went to Asia and didnt tell nobody,Calvin,Harris,false
-Nonfiction,True Confessions of an Uber Driver,Alex,Marks, true
+Nonfiction,True Confessions of an Uber Driver,Alex,Marks,true
 Nonfiction,How to be ghetto without trying too hard,Momo,Yanze,true
 Nonfiction,The ABCs of Coding,Kamel,ItssoEasy,false
 Nonfiction,How to Get Away With Murder in TV,Shonda,Rhimes,true
