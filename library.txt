@@ -1,33 +1,33 @@
-Fiction,Ulysses,James,Joyce
-Fiction,American Psycho,Brett,Easton-Ellis
-Fiction,Vineland,Thomas,Pynchon
-Fiction,Life: A User's Manual,Georges,Perec
-Fiction,A Long Project,Will,Spencer
-Fiction,Tedious,Jay,Kelley
-Fiction,Fifty Shades of Jay,Jay,Watt
-Fiction,Ride Or Die,Dee,Emex
-Nonfiction,Boughetto: An Autobiography,Jay,Watt
-Nonfiction,My Life,Jesus,Christ
-Nonfiction,It Is Like So Easy,Doctor,Kamel
-Nonfiction,Just Google It,Doctor,Kamel
-Nonfiction,Started From The Bottom,Greg,Allday
-Nonfiction,The Game Remain The Same,Greg,Allday
-Nonfiction,Huntin' & Stuntin',Dick,Dieterle
-Nonfiction,Boss Vaughn
-Childrens,Power Stances,Kim,Driscoll
-Childrens,How To Disappear in America,Calvin,Harris
-Childrens,The Aalphabet,Aaron,Wolff
-Childrens,The Chioke Doctrine,Chioke,M.T
-Childrens,Double Agent,Trevon,Thomas
-Childrens,Cool Beans!!,Saresa,Smith
-Childrens,Super Dad,Jason,Scott
-Childrens,Theater For Kids,Mahogany,Yancey
-Reference,Data Mining,Celena,Mancina
-Reference,How To Run A Million Dollar BEAST,Damien,Rocchi
-Reference,The Backend,Maurice,Tedder
-Reference,Popular Karaoke,Aisha,Blake
-Reference,How To Behave,Ian,Washington
-Reference,Street Tactics,Bill,Spencer
-Reference,Trappin 101,Bill,Spencer
-Reference,Protect Your Neck,Danielle,Hall
+Fiction,Ulysses,James,Joyce,false
+Fiction,American Psycho,Brett,Easton-Ellis,false
+Fiction,Vineland,Thomas,Pynchon,false
+Fiction,Life: A User's Manual,Georges,Perec,false
+Fiction,A Long Project,Will,Spencer,false
+Fiction,Tedious,Jay,Kelley,false
+Fiction,Fifty Shades of Jay,Jay,Watt,true
+Fiction,Ride Or Die,Dee,Emex,true
+Nonfiction,Boughetto: An Autobiography,Jay,Watt,false
+Nonfiction,My Life,Jesus,Christ,false
+Nonfiction,It Is Like So Easy,Doctor,Kamel,true
+Nonfiction,Just Google It,Doctor,Kamel,false
+Nonfiction,Started From The Bottom,Greg,Allday,false
+Nonfiction,The Game Remain The Same,Greg,Allday,true
+Nonfiction,Huntin' & Stuntin',Dick,Dieterle,false
+Nonfiction,Boss Moves,Jeseekia,Vaughn,,false
+Childrens,Power Stances,Kim,Driscoll,false
+Childrens,How To Disappear in America,Calvin,Harris,true
+Childrens,The Aalphabet,Aaron,Wolff,false
+Childrens,The Chioke Doctrine,Chioke,M.T,false
+Childrens,Double Agent,Trevon,Thomas,false
+Childrens,Cool Beans!!,Saresa,Smith,false
+Childrens,Super Dad,Jason,Scott,false
+Childrens,Theater For Kids,Mahogany,Yancey,false
+Reference,Data Mining,Celena,Mancina,false
+Reference,How To Run A Million Dollar BEAST,Damien,Rocchi,true
+Reference,The Backend,Maurice,Tedder,false
+Reference,Popular Karaoke,Aisha,Blake,false
+Reference,How To Behave,Ian,Washington,false
+Reference,Street Tactics,Bill,Spencer,false
+Reference,Trappin 101,Bill,Spencer,false
+Reference,Protect Your Neck,Danielle,Hall,true
 
