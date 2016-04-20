@@ -8,9 +8,10 @@ import java.util.ArrayList;
 
 public class Library 
 {
-static ArrayList<Book> myLibrary= new ArrayList<>();
-public static void getLibrary() {
-	
+ 
+public static ArrayList<Book> getLibrary() {
+	ArrayList<Book> myLibrary= new ArrayList<>();
+
 	Path librariesPath = Paths.get("library.txt");
 	File librariesFile = librariesPath.toFile();
 	try {
@@ -22,6 +23,7 @@ public static void getLibrary() {
 		String delims = "[,]";
 		String[] list = line.split(delims);
 		myLibrary.add(new Book(list[0],list[1],list[2],list[3],list[4]));
+		
 	
 	line = in.readLine();
 	}
@@ -31,6 +33,7 @@ public static void getLibrary() {
 	{
 	System.out.println(e);
 	}
+	return myLibrary;
 
 }
 }
