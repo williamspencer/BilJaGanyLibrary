@@ -6,9 +6,9 @@ public class Book {
 		private String lastName;
 		private String firstName;
 		private String genre;
-		private boolean checkOut = false;
+		private String checkOut;
 		
-		public Book(String a, String b, String c, String d, boolean x){
+		public Book(String a, String b, String c, String d, String x){
 			genre = a;
 			title = b;
 			firstName = c;
