@@ -39,7 +39,7 @@ static ArrayList<Book> myLibrary;
 	public static void printLibrary(){
 		for (int i = 0; i < myLibrary.size(); i++){
 //			this prints all info on each book NEED METHOD
-			System.out.println(myLibrary.get(i).printBook());
+			myLibrary.get(i).printBook();
 		}
 	}
 	public static void printMenu() {
