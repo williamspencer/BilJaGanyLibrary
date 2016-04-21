@@ -38,9 +38,15 @@ static ArrayList<Book> myLibrary;
 		}
 	public static void printLibrary(){
 		for (int i = 0; i < myLibrary.size(); i++){
-//			this prints all info on each book NEED METHOD
+			if (myLibrary.get(i).getCheckOut().equalsIgnoreCase("true"))
+					myLibrary.get(i).printBook(" (x)");
+			
+			//			this prints all info on each book NEED METHOD
 			myLibrary.get(i).printBook();
+			
 		}
+		System.out.println();
+		System.out.println("(x)=Book is checked out");
 	}
 	public static void printMenu() {
 		System.out.println("Main Menu:");

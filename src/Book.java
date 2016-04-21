@@ -5,6 +5,10 @@ public class Book {
 		private String title;
 		private String lastName;
 		private String firstName;
+		public void printBook(String x)
+		{ 
+			System.out.println("\""+getTitle()+"\""+", by "+ getFirstName()+" "+getLastName() + x);
+		}
 		
 		public void printBook()
 		{
