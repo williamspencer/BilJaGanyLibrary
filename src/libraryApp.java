@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.*;
 
 public class libraryApp {
 	static Scanner sc = new Scanner(System.in);
@@ -31,6 +32,7 @@ public class libraryApp {
 		case "3":
 			break;
 		case "4":
+			generateRandomBook();
 			break;
 		case "5":
 			break;
@@ -278,6 +280,30 @@ public class libraryApp {
 
 		getCheckOut();
 
+	}
+	
+	public static void generateRandomBook (){
+		System.out.print("Do you feel lucky?  ");
+		String yOrN = sc.nextLine();
+		
+		Random r = new Random();
+		
+		
+		while (yOrN.equalsIgnoreCase("y")) {
+			int x = r.nextInt(myLibrary.size());
+			System.out.println("\n" + myLibrary.get(x).getBook());
+			
+			checkOut.add(myLibrary.get(x)); System.out.println("This book has been added to your cart!");
+			System.out.println("Checkout another book? (y/n)");
+			yOrN = sc.nextLine();
+			}
+		printSearchMenu();
+		
+			
+		
+		
+		
+		
 	}
 
 }
