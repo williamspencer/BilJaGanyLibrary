@@ -26,6 +26,9 @@ public class Book {
 		public String getFirstName() {
 			return firstName;
 		}
+		public String getBook() {
+			return title + " By: " + firstName + " " + lastName;
+		}
 		public String getGenre() {
 			return genre;
 		}

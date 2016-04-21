@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class libraryApp {
@@ -24,6 +25,9 @@ static ArrayList<Book> myLibrary;
 				printLibrary();
 				break;
 			case "2":
+				printSearchMenu();
+				String x = sc.nextLine();
+				searchMenu(x);
 				break;
 			case "3":
 				break;
@@ -57,6 +61,171 @@ static ArrayList<Book> myLibrary;
 		System.out.println("5 - Exit");
 		System.out.print("\nEnter menu number: ");
 	}
+	
+	public static void printSearchMenu() {
+		System.out.println(" Search By:");
+		System.out.println("1 - Genre");
+		System.out.println("2 - Title");
+		System.out.println("3 - Author Last Name");
+		System.out.println("4 - Author First Name");
+		System.out.println("5 - Keyword");
+		System.out.println("6 - Main Menu");
+		System.out.print("\nEnter menu number: ");
+	}
+	public static void searchMenu(String x) {
+		switch(x){
+			case "1":
+				searchGenre();
+				break;
+			case "2":
+				searchTitle();
+				break;
+			case "3":
+				searchLastName();
+				break;
+			case "4":
+				searchFirstName();
+				break;
+			case "5":
+				searchKeyWord();
+				break;
+			case "6":
+				printMenu();
+				break;
+			default :
+				System.out.println("Enter a valid option, you peasant.\n");
+				break;
+		}
+		}
+	public static String numToGenre(int x) {
+		String userInput = "";
+		switch (x) {
+		case 1:
+			userInput = "Nonfiction";
+			break;
+		case 2:
+			userInput = "Fiction";
+			break;
+		case 3:
+			userInput = "Childrens";
+			break;
+		case 4:
+			userInput = "Reference";
+			break;
+		}
+		return userInput;
+	}
+	public static void searchGenre(){
+		
+		System.out.println("1.Nonfiction\n2.Fiction");
+        System.out.println("3.Childrens\n4.Reference\n");
+        System.out.print("What category are you interested in? (enter # 1-4): ");
+		int x = sc.nextInt();
+		sc.nextLine();
+		String userInput = numToGenre(x);
+		ArrayList<String> alpha = new ArrayList<String>();
+		for (int i = 0; i < myLibrary.size(); i++) {
+			if (myLibrary.get(i).getGenre().equalsIgnoreCase(userInput))
+				alpha.add(myLibrary.get(i).getBook());
+		}
+		String[] alphaArray = new String[alpha.size()];
+		alpha.toArray(alphaArray);
+		Arrays.sort(alphaArray);
+		
+		for (int i = 0; i < alphaArray.length; i++) {
+            System.out.println(alphaArray[i]);
+        }
+		
+		
+		
+	}
+	
+    public static void searchLastName(){
+    	System.out.print("Please enter Author last name: ");
+    	String userInput = sc.nextLine();
+    	
+		ArrayList<String> alpha = new ArrayList<String>();
+		for (int i = 0; i < myLibrary.size(); i++) {
+			if (myLibrary.get(i).getLastName().equalsIgnoreCase(userInput))
+				alpha.add(myLibrary.get(i).getBook());
+		}
+		String[] alphaArray = new String[alpha.size()];
+		alpha.toArray(alphaArray);
+		Arrays.sort(alphaArray);
+		
+		for (int i = 0; i < alphaArray.length; i++) {
+            System.out.println(alphaArray[i]);
+        }
+		
+		
+		
+	}
+public static void searchFirstName(){
+	System.out.print("Please enter Author first name: ");
+	String userInput = sc.nextLine();
+	
+	ArrayList<String> alpha = new ArrayList<String>();
+	for (int i = 0; i < myLibrary.size(); i++) {
+		if (myLibrary.get(i).getFirstName().equalsIgnoreCase(userInput))
+			alpha.add(myLibrary.get(i).getBook());
+	}
+	String[] alphaArray = new String[alpha.size()];
+	alpha.toArray(alphaArray);
+	Arrays.sort(alphaArray);
+	
+	for (int i = 0; i < alphaArray.length; i++) {
+        System.out.println(alphaArray[i]);
+    }
+	
+	
+	
+}
+public static void searchTitle(){
+	System.out.print("Please enter Book Title: ");
+	String userInput = sc.nextLine();
+	
+	ArrayList<String> alpha = new ArrayList<String>();
+	for (int i = 0; i < myLibrary.size(); i++) {
+		if (myLibrary.get(i).getTitle().equalsIgnoreCase(userInput))
+			alpha.add(myLibrary.get(i).getBook());
+	}
+	String[] alphaArray = new String[alpha.size()];
+	alpha.toArray(alphaArray);
+	Arrays.sort(alphaArray);
+	
+	for (int i = 0; i < alphaArray.length; i++) {
+        System.out.println(alphaArray[i]);
+    }
+		
+		
+		
+	}
+
+public static void searchKeyWord(){
+	System.out.print("Please enter Keyword: ");
+	String userInput = sc.nextLine();
+	
+	ArrayList<String> alpha = new ArrayList<String>();
+	for (int i = 0; i < myLibrary.size(); i++) {
+		if (myLibrary.get(i).getBook().contains(userInput))
+			alpha.add(myLibrary.get(i).getBook());
+	}
+	String[] alphaArray = new String[alpha.size()];
+	alpha.toArray(alphaArray);
+	Arrays.sort(alphaArray);
+	
+	for (int i = 0; i < alphaArray.length; i++) {
+        System.out.println(alphaArray[i]);
+    }
+	
+	
+	
+}
+	
+	
+	
+	
+	
 }
 
 
