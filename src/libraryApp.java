@@ -28,8 +28,8 @@ public class libraryApp {
 				break;
 			case "2":
 				printSearchMenu();
-				String x = sc.nextLine();
-				searchMenu(x);
+//				String x = sc.nextLine();
+//				searchMenu(x);
 				break;
 			case "3":
 				getBookcart();
@@ -42,6 +42,7 @@ public class libraryApp {
 				return; 
 			default:
 				System.out.println("Enter a valid option, you peasant.\n");
+				printMenu();
 				break;
 			}	
 			input = sc.nextLine();
@@ -56,29 +57,30 @@ public class libraryApp {
 		printMenu();
 	}
 
-	public static void optionMenu(String input) {
-		switch (input) {
-		case "1":
-			printLibrary();
-			break;
-		case "2":
-			printSearchMenu();
-			String x = sc.nextLine();
-			searchMenu(x);
-			break;
-		case "3":getCheckout();
-			break;
-		case "4":
-			generateRandomBook();
-			break;
-		case "5":
-			break;
-		default:
-			System.out.println("Enter a valid option, you peasant.\n");
-			break;
-		}
-		
-	}
+//	public static void optionMenu(String input) {
+//		switch (input) {
+//		case "1":
+//			printLibrary();
+//			break;
+//		case "2":
+//			printSearchMenu();
+////			String x = sc.nextLine();
+////			searchMenu(x);
+//			break;
+//		case "3":getCheckout();
+//			break;
+//		case "4":
+//			generateRandomBook();
+//			break;
+//		case "5":
+//			break;
+//		default:
+//			System.out.println("Enter a valid option, you peasant.\n");
+//			
+//			break;
+//		}
+//		
+//	}
 
 	public static void getCheckout() {
 		getBookcart();
@@ -110,6 +112,7 @@ public class libraryApp {
 	}
 
 	public static void printSearchMenu() {
+		
 		System.out.println(" Search By:");
 		System.out.println("1 - Genre");
 		System.out.println("2 - Title");
@@ -118,9 +121,12 @@ public class libraryApp {
 		System.out.println("5 - Keyword");
 		System.out.println("6 - Main Menu");
 		System.out.print("\nEnter menu number: ");
+
+		searchMenu();
 	}
 
-	public static void searchMenu(String x) {
+	public static void searchMenu() {
+		String x = sc.nextLine();
 		switch (x) {
 		case "1":
 			searchGenre();
@@ -142,6 +148,7 @@ public class libraryApp {
 			break;
 		default:
 			System.out.println("Enter a valid option, you peasant.\n");
+			printSearchMenu();
 			break;
 		}
 	}
@@ -401,8 +408,8 @@ public class libraryApp {
 			yOrN = sc.nextLine();
 		}
 		printSearchMenu();
-		String x = sc.nextLine();
-		searchMenu(x);
+//		String x = sc.nextLine();
+//		searchMenu(x);
 
 	}
 
