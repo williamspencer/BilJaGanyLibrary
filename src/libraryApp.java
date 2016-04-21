@@ -17,7 +17,7 @@ public class libraryApp {
 	static ArrayList<Book> checkOut = new ArrayList<Book>();
 	static String username;
 
-<<<<<<< HEAD
+
 	public static void optionMenu() {
 		String input = sc.nextLine();
 		while (true) {
@@ -46,8 +46,7 @@ public class libraryApp {
 				break;
 			}	
 			input = sc.nextLine();
-=======
-		printMenu();
+		}
 
 	}
 
@@ -71,7 +70,6 @@ public class libraryApp {
 		default:
 			System.out.println("Enter a valid option, you peasant.\n");
 			break;
->>>>>>> 1cf044f6b73abb9ce530ce73eed5448c03b789e8
 		}
 		
 	}
@@ -271,7 +269,6 @@ public class libraryApp {
 		getCheckOut();
 	}
 
-<<<<<<< HEAD
 	public static void searchKeyWord() {
 		System.out.print("Please enter Keyword: ");
 		String userInput = sc.nextLine();
@@ -298,7 +295,6 @@ public class libraryApp {
 		getCheckOut();
 
 	}
-=======
 //	public static void searchKeyWord() {
 //		System.out.print("Please enter Keyword: ");
 //		String userInput = sc.nextLine();
@@ -331,7 +327,6 @@ public class libraryApp {
 //		getCheckOut();
 //
 //	}
->>>>>>> 1cf044f6b73abb9ce530ce73eed5448c03b789e8
 
 	public static void addtoCheckoutReceipt() {
 
@@ -342,25 +337,17 @@ public class libraryApp {
 			FileWriter fw = new FileWriter(usernameFile, true);
 			BufferedWriter bw = new BufferedWriter(fw);
 			PrintWriter out = new PrintWriter(bw);
-<<<<<<< HEAD
 
 			// out.println("BilJaGany Book Log!!!");
 			// out.println("Below is a List of the Books you have checked
 			// out:\n");
 
-			for (Book p : checkOut) {
-				out.println(p.getBook());
-				System.out.println("You checked out " + p.getBook());
-=======
+
 			
-			//out.println("BilJaGany Book Log!!!");
-			//out.println("Below is a List of the Books you have checked out:\n");
-			
-			for (Book p:checkOut)
+			for (Book p :checkOut)
 			{
 			out.println(p.getBook());
 			System.out.println("You checked out "+ p.getBook());
->>>>>>> 1cf044f6b73abb9ce530ce73eed5448c03b789e8
 			}
 
 			out.close();
@@ -372,37 +359,20 @@ public class libraryApp {
 			e.printStackTrace();
 		}
 	}
-
-<<<<<<< HEAD
-	public static void generateRandomBook() {
-		System.out.print("Do you feel lucky? (y/n):  ");
-		String yOrN = sc.nextLine();
-
-		Random r = new Random();
-
-=======
 	
-	public static void generateRandomBook (){
+	public static void generateRandomBook(){
 		Random r = new Random();
 		System.out.print("Do you feel lucky?(y/n):");
 		String yOrN = sc.nextLine();
 		
->>>>>>> 1cf044f6b73abb9ce530ce73eed5448c03b789e8
 		while (yOrN.equalsIgnoreCase("y")) {
 			int x = r.nextInt(myLibrary.size());
 			
 			System.out.println("\n" + myLibrary.get(x).getBook());
-<<<<<<< HEAD
 
-			checkOut.add(myLibrary.get(x));
-			System.out.println("This book has been added to your cart!");
-			System.out.println("Checkout another book? (y/n)");
-=======
-			
 			checkOut.add(myLibrary.get(x)); 
 			System.out.println("This book has been added to your cart!");
 			System.out.println("Checkout another book? (y/n):");
->>>>>>> 1cf044f6b73abb9ce530ce73eed5448c03b789e8
 			yOrN = sc.nextLine();
 		}
 		printMenu();
@@ -426,19 +396,10 @@ public class libraryApp {
 			yOrN = sc.nextLine();
 		}
 		printSearchMenu();
-<<<<<<< HEAD
 		String x = sc.nextLine();
 		searchMenu(x);
 
 	}
-=======
-		String input = sc.nextLine();
-		searchMenu(input);
-	}
-	
-	}
-
->>>>>>> 1cf044f6b73abb9ce530ce73eed5448c03b789e8
 
 	public static void main(String[] args) {
 		myLibrary = Library.getLibrary();
