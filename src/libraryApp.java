@@ -1,3 +1,11 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -7,13 +15,16 @@ public class libraryApp {
 	static Scanner sc = new Scanner(System.in);
 	static ArrayList<Book> myLibrary;
 	static ArrayList<Book> checkOut = new ArrayList<Book>();
-
+	static String username;
 	public static void main(String[] args) {
 		myLibrary = Library.getLibrary();
 
 		System.out.println("Welcome to the best library in the world!");
 		System.out.println("Full of the rarest books in creation\n");
 		System.out.println("THE BILJAGANY LIBRARY!!!!\n");
+		System.out.println("What is your name?");
+		username=sc.nextLine();
+		
 
 		printMenu();
 
@@ -29,7 +40,8 @@ public class libraryApp {
 			String x = sc.nextLine();
 			searchMenu(x);
 			break;
-		case "3":
+		case "3":for (Book p:checkOut)
+			System.out.println(p.getBook());
 			break;
 		case "4":
 			generateRandomBook();
@@ -44,21 +56,29 @@ public class libraryApp {
 
 	public static void printLibrary() {
 		for (int i = 0; i < myLibrary.size(); i++) {
-			if (myLibrary.get(i).getCheckOut().equalsIgnoreCase("true"))
+			if (myLibrary.get(i).getCheckOut().equalsIgnoreCase("true")){
 				myLibrary.get(i).printBook(" (x)");
-
+			} else {
 			// this prints all info on each book NEED METHOD
 			myLibrary.get(i).printBook();
+<<<<<<< HEAD
           
 		}
 		System.out.println();
 		System.out.println("(x)=Book is checked out");
 		
+=======
+			}
+		}
+		System.out.println();
+		System.out.println("(x)=Book is checked out\n");
+		getCheckOut();
+>>>>>>> 63c0a5905bb7ccfe4f42ac347ade33ef470afbf3
 	}
 	
 
 	public static void printMenu() {
-		System.out.println("Main Menu:");
+		System.out.println("Hey "+ username+ " this is the Main Menu:");
 		System.out.println("1 - See Entire Catalog");
 		System.out.println("2 - Search");
 		System.out.println("3 - Bookcart");
@@ -119,6 +139,8 @@ public class libraryApp {
 					checkOut.add(myLibrary.get(i));
 				myLibrary.get(i).setCheckOut("true");
 			}
+			//Added by James
+			addtoCheckoutReceipt();
 			System.out.println("Checkout another book? (y/n)");
 			yOrN = sc.nextLine();
 		}
@@ -283,6 +305,37 @@ public class libraryApp {
 		getCheckOut();
 
 	}
+
+	//Added to file by James
+	public static void addtoCheckoutReceipt() {
+		
+		Path usernamePath = Paths.get(username+".txt");
+		File usernameFile = usernamePath.toFile();
+		
+		try 
+		{
+			FileWriter fw = new FileWriter(usernameFile, true);
+			BufferedWriter bw = new BufferedWriter(fw);
+			PrintWriter out = new PrintWriter(bw);
+			
+			//out.println("BilJaGany Book Log!!!");
+			//out.println("Below is a List of the Books you have checked out:\n");
+			
+			for (Book p:checkOut)
+			{out.println(p.getBook());
+			System.out.println("You checked out "+ p.getBook());
+			}
+			
+			out.close();
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
 	
 	public static void generateRandomBook (){
 		System.out.print("Do you feel lucky?  ");
@@ -303,5 +356,5 @@ public class libraryApp {
 				
 		
 	}
-
 }
+
