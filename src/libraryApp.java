@@ -49,11 +49,13 @@ public class libraryApp {
 
 			// this prints all info on each book NEED METHOD
 			myLibrary.get(i).printBook();
-
+          
 		}
 		System.out.println();
 		System.out.println("(x)=Book is checked out");
+		
 	}
+	
 
 	public static void printMenu() {
 		System.out.println("Main Menu:");
@@ -285,7 +287,6 @@ public class libraryApp {
 	public static void generateRandomBook (){
 		System.out.print("Do you feel lucky?  ");
 		String yOrN = sc.nextLine();
-		
 		Random r = new Random();
 		
 		
@@ -297,12 +298,9 @@ public class libraryApp {
 			System.out.println("Checkout another book? (y/n)");
 			yOrN = sc.nextLine();
 			}
-		printSearchMenu();
+		printSearchMenu();				
 		
-			
-		
-		
-		
+				
 		
 	}
 
