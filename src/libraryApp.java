@@ -61,20 +61,15 @@ public class libraryApp {
 			} else {
 			// this prints all info on each book NEED METHOD
 			myLibrary.get(i).printBook();
-<<<<<<< HEAD
           
 		}
-		System.out.println();
-		System.out.println("(x)=Book is checked out");
 		
-=======
-			}
 		}
 		System.out.println();
 		System.out.println("(x)=Book is checked out\n");
 		getCheckOut();
->>>>>>> 63c0a5905bb7ccfe4f42ac347ade33ef470afbf3
 	}
+
 	
 
 	public static void printMenu() {
