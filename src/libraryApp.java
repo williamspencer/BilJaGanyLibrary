@@ -32,8 +32,7 @@ public class libraryApp {
 				searchMenu(x);
 				break;
 			case "3":
-				for (Book p : checkOut)
-					System.out.println(p.getBook());
+				getBookcart();
 				break;
 			case "4":
 				generateRandomBook();
@@ -48,6 +47,13 @@ public class libraryApp {
 			input = sc.nextLine();
 		}
 
+	}
+
+	public static void getBookcart() {
+		for (Book p : checkOut)
+			System.out.println(p.getBook());
+		System.out.println();
+		printMenu();
 	}
 
 	public static void optionMenu(String input) {
@@ -75,8 +81,7 @@ public class libraryApp {
 	}
 
 	public static void getCheckout() {
-		for (Book p:checkOut)
-			System.out.println(p.getBook());
+		getBookcart();
 	}
 
 	public static void printLibrary() {
