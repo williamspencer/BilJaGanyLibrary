@@ -29,11 +29,17 @@ public class Book {
 		public String getBook() {
 			return title + " By: " + firstName + " " + lastName;
 		}
+		public String getBook(String x) {
+			return title + " By: " + firstName + " " + lastName + x;
+			}
 		public String getGenre() {
 			return genre;
 		}
 		public String getCheckOut() {
 			return checkOut;
+		}
+		public void setCheckOut(String x) {
+			checkOut = x;
 		}
 		private String genre;
 		private String checkOut;
