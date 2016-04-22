@@ -68,18 +68,13 @@ public class libraryApp {
 			if (myLibrary.get(i).getCheckOut().equalsIgnoreCase("true")) {
 				myLibrary.get(i).printBook(" (x)");
 			} else {
-
-			// this prints all info on each book NEED METHOD
-			myLibrary.get(i).printBook();
-          
+				// this prints all info on each book NEED METHOD
+				myLibrary.get(i).printBook();
+			}
 		}
-		
-
-			
 		System.out.println();
 		System.out.println("(x)=Book is checked out\n");
 		getCheckOut();
-	}
 	}
 
 	public static void printMenu() {
@@ -403,11 +398,11 @@ public class libraryApp {
 					checkOut.add(myLibrary.get(i));
 					myLibrary.get(i).setCheckOut("true");
 				}
-			else{
-				System.out.println("I don't see that title baby. Here's our entire library. ");
-				System.out.println("\n");
-					printLibrary();
-				}
+//			else{
+//				System.out.println("I don't see that title baby. Here's our entire library. ");
+//				System.out.println("\n");
+//					printLibrary();
+//				}
 ////				yOrN = sc.nextLine();
 //				if(yOrN.equalsIgnoreCase("y")){
 //					getCheckOut();
