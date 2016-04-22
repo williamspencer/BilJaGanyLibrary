@@ -68,13 +68,18 @@ public class libraryApp {
 			if (myLibrary.get(i).getCheckOut().equalsIgnoreCase("true")) {
 				myLibrary.get(i).printBook(" (x)");
 			} else {
-				// this prints all info on each book NEED METHOD
-				myLibrary.get(i).printBook();
-			}
+
+			// this prints all info on each book NEED METHOD
+			myLibrary.get(i).printBook();
+          
 		}
+		
+
+			
 		System.out.println();
 		System.out.println("(x)=Book is checked out\n");
 		getCheckOut();
+	}
 	}
 
 	public static void printMenu() {
