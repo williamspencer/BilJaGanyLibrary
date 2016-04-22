@@ -11,12 +11,14 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.*;
 
+//Fixed Keyword, Created WelcomeMenu Method,Changed searchLastName,Title,FirstName,Genre
+//***concerns bookcart read from Txt?,Validator for CHeckout?,STatic words for checkout,repeats
+//Auto check-out for 1 list arrays
 public class libraryApp {
 	static Scanner sc = new Scanner(System.in);
 	static ArrayList<Book> myLibrary;
 	static ArrayList<Book> checkOut = new ArrayList<Book>();
 	static String username;
-
 
 	public static void optionMenu() {
 		String input = sc.nextLine();
@@ -28,23 +30,23 @@ public class libraryApp {
 				break;
 			case "2":
 				printSearchMenu();
-//				String x = sc.nextLine();
-//				searchMenu(x);
+				// String x = sc.nextLine();
+				// searchMenu(x);
 				break;
 			case "3":
 				getBookcart();
-				break;
+				break;    
 			case "4":
 				generateRandomBook();
 				break;
 			case "5":
 				System.out.println("Goodbye!");
-				return; 
+				return;
 			default:
 				System.out.println("Enter a valid option, you peasant.\n");
 				printMenu();
 				break;
-			}	
+			}
 			input = sc.nextLine();
 		}
 
@@ -56,31 +58,6 @@ public class libraryApp {
 		System.out.println();
 		printMenu();
 	}
-
-//	public static void optionMenu(String input) {
-//		switch (input) {
-//		case "1":
-//			printLibrary();
-//			break;
-//		case "2":
-//			printSearchMenu();
-////			String x = sc.nextLine();
-////			searchMenu(x);
-//			break;
-//		case "3":getCheckout();
-//			break;
-//		case "4":
-//			generateRandomBook();
-//			break;
-//		case "5":
-//			break;
-//		default:
-//			System.out.println("Enter a valid option, you peasant.\n");
-//			
-//			break;
-//		}
-//		
-//	}
 
 	public static void getCheckout() {
 		getBookcart();
@@ -112,7 +89,7 @@ public class libraryApp {
 	}
 
 	public static void printSearchMenu() {
-		
+
 		System.out.println(" Search By:");
 		System.out.println("1 - Genre");
 		System.out.println("2 - Title");
@@ -141,7 +118,7 @@ public class libraryApp {
 			searchFirstName();
 			break;
 		case "5":
-			//searchKeyWord();
+			searchKeyWord();
 			break;
 		case "6":
 			printMenu();
@@ -199,7 +176,17 @@ public class libraryApp {
 		for (int i = 0; i < alphaArray.length; i++) {
 			System.out.println(alphaArray[i]);
 		}
-		getCheckOut();
+		if (alphaArray.length > 0) {
+			getCheckOut();
+		} else {
+			System.out.println("Not a valid entry! Try again?(y/n)");
+			String continueKeyword = sc.nextLine();
+			if (continueKeyword.equalsIgnoreCase("y")) {
+				searchGenre();
+			} else {
+				searchMenu();
+			}
+		}
 	}
 
 	public static void searchLastName() {
@@ -224,8 +211,17 @@ public class libraryApp {
 		for (int i = 0; i < alphaArray.length; i++) {
 			System.out.println(alphaArray[i]);
 		}
-
-		getCheckOut();
+		if (alphaArray.length > 0) {
+			getCheckOut();
+		} else {
+			System.out.println("Entry not found! Try again?(y/n)");
+			String continueKeyword = sc.nextLine();
+			if (continueKeyword.equalsIgnoreCase("y")) {
+				searchLastName();
+			} else {
+				searchMenu();
+			}
+		}
 	}
 
 	public static void searchFirstName() {
@@ -250,8 +246,17 @@ public class libraryApp {
 		for (int i = 0; i < alphaArray.length; i++) {
 			System.out.println(alphaArray[i]);
 		}
-
-		getCheckOut();
+		if (alphaArray.length > 0) {
+			getCheckOut();
+		} else {
+			System.out.println("Entry not found! Try again?(y/n)");
+			String continueKeyword = sc.nextLine();
+			if (continueKeyword.equalsIgnoreCase("y")) {
+				searchFirstName();
+			} else {
+				searchMenu();
+			}
+		}
 
 	}
 
@@ -277,25 +282,37 @@ public class libraryApp {
 		for (int i = 0; i < alphaArray.length; i++) {
 			System.out.println(alphaArray[i]);
 		}
-
-		getCheckOut();
+		if (alphaArray.length > 0) {
+			getCheckOut();
+		} else {
+			System.out.println("Entry not found! Try again?(y/n)");
+			String continueKeyword = sc.nextLine();
+			if (continueKeyword.equalsIgnoreCase("y")) {
+				searchTitle();
+			} else {
+				searchMenu();
+			}
+		}
 	}
 
+	// Keyword functions(sort of)
 	public static void searchKeyWord() {
 		System.out.print("Please enter Keyword: ");
 		String userInput = sc.nextLine();
+		userInput = userInput.toUpperCase();
 
 		ArrayList<String> alpha = new ArrayList<String>();
 		for (int i = 0; i < myLibrary.size(); i++) {
-			if (myLibrary.get(i).getTitle().contains(userInput)) {
-
-				if (myLibrary.get(i).getCheckOut().equalsIgnoreCase("true")) {
-					alpha.add(myLibrary.get(i).getBook(" (x)"));
-				} else {
-					alpha.add(myLibrary.get(i).getBook());
-				}
-			}
+			if (myLibrary.get(i).getTitle().toUpperCase().contains(userInput))
+				alpha.add(myLibrary.get(i).getBook());
+			if (myLibrary.get(i).getLastName().toUpperCase().contains(userInput))
+				alpha.add(myLibrary.get(i).getBook());
+			if (myLibrary.get(i).getGenre().toUpperCase().contains(userInput))
+				alpha.add(myLibrary.get(i).getBook());
+			if (myLibrary.get(i).getFirstName().toUpperCase().contains(userInput))
+				alpha.add(myLibrary.get(i).getBook());
 		}
+
 		String[] alphaArray = new String[alpha.size()];
 		alpha.toArray(alphaArray);
 		Arrays.sort(alphaArray);
@@ -303,42 +320,18 @@ public class libraryApp {
 		for (int i = 0; i < alphaArray.length; i++) {
 			System.out.println(alphaArray[i]);
 		}
-
-		getCheckOut();
-
+		if (alphaArray.length > 0) {
+			getCheckOut();
+		} else {
+			System.out.println("Entry not found! Try again?(y/n)");
+			String continueKeyword = sc.nextLine();
+			if (continueKeyword.equalsIgnoreCase("y")) {
+				searchKeyWord();
+			} else {
+				searchMenu();
+			}
+		}
 	}
-//	public static void searchKeyWord() {
-//		System.out.print("Please enter Keyword: ");
-//		String userInput = sc.nextLine();
-//
-//		ArrayList<String> alpha = new ArrayList<String>();
-//		for(Book d : myLibrary){
-//	        if(d.getTitle() != null && d.getTitle().contains(userInput))
-	        	
-	        	
-//	       }
-//		ArrayList<String> alpha = new ArrayList<String>();
-//		for (int i = 0; i < myLibrary.size(); i++) {
-//			if (myLibrary.get(i).getTitle().contains(userInput)){
-//				
-//				if (myLibrary.get(i).getCheckOut().equalsIgnoreCase("true")){
-//					alpha.add(myLibrary.get(i).getBook(" (x)"));
-//				}else {
-//				alpha.add(myLibrary.get(i).getBook());
-//				}
-//			}
-//		}
-//		String[] alphaArray = new String[alpha.size()];
-//		alpha.toArray(alphaArray);
-//		Arrays.sort(alphaArray);
-//
-//		for (int i = 0; i < alphaArray.length; i++) {
-//			System.out.println(alphaArray[i]);
-//		}
-//
-//		getCheckOut();
-//
-//	}
 
 	public static void addtoCheckoutReceipt() {
 
@@ -350,16 +343,9 @@ public class libraryApp {
 			BufferedWriter bw = new BufferedWriter(fw);
 			PrintWriter out = new PrintWriter(bw);
 
-			// out.println("BilJaGany Book Log!!!");
-			// out.println("Below is a List of the Books you have checked
-			// out:\n");
-
-
-			
-			for (Book p :checkOut)
-			{
-			out.println(p.getBook());
-			System.out.println("You checked out "+ p.getBook());
+			for (Book p : checkOut) {
+				out.println(p.getBook());
+				System.out.println("You checked out " + p.getBook());
 			}
 
 			out.close();
@@ -371,18 +357,18 @@ public class libraryApp {
 			e.printStackTrace();
 		}
 	}
-	
-	public static void generateRandomBook(){
+
+	public static void generateRandomBook() {
 		Random r = new Random();
 		System.out.print("Do you feel lucky?(y/n):");
 		String yOrN = sc.nextLine();
-		
+
 		while (yOrN.equalsIgnoreCase("y")) {
 			int x = r.nextInt(myLibrary.size());
-			
+
 			System.out.println("\n" + myLibrary.get(x).getBook());
 
-			checkOut.add(myLibrary.get(x)); 
+			checkOut.add(myLibrary.get(x));
 			System.out.println("This book has been added to your cart!");
 			System.out.println("Checkout another book? (y/n):");
 			yOrN = sc.nextLine();
@@ -399,30 +385,63 @@ public class libraryApp {
 			String input = sc.nextLine();
 
 			for (int i = 0; i < myLibrary.size(); i++) {
-				if (myLibrary.get(i).getTitle().equalsIgnoreCase(input))
+				if (myLibrary.get(i).getTitle().equalsIgnoreCase(input)
+						&& myLibrary.get(i).getCheckOut().equalsIgnoreCase("true")) {
+					System.out.println(
+							"That book is already checked out sugar dumpling. Would you like to try it again?(y/n)");
+					yOrN = sc.nextLine();
+					if(yOrN.equalsIgnoreCase("y"))
+						getCheckOut();
+				}
+				if(myLibrary.get(i).getTitle().equalsIgnoreCase(input)
+						&& myLibrary.get(i).getCheckOut().equalsIgnoreCase("false")) {
 					checkOut.add(myLibrary.get(i));
-				myLibrary.get(i).setCheckOut("true");
-			}
+					myLibrary.get(i).setCheckOut("true");
+				}
+			else{
+				System.out.println("I don't see that title baby. Here's our entire library. ");
+				System.out.println("\n");
+					printLibrary();
+				}
+////				yOrN = sc.nextLine();
+//				if(yOrN.equalsIgnoreCase("y")){
+//					getCheckOut();
+//				}else{
+//					searchMenu();
+//				}
+					
+				}
+						
+//				if(!myLibrary.get(i).getTitle().equalsIgnoreCase(input)){
+//					System.out.println("We can't find that book honey bunches of oats.Try again(y/n):");
+//					yOrN = sc.nextLine();
+//					if(yOrN.equalsIgnoreCase("y")){
+//						getCheckOut();
+//					}else{
+//						searchMenu();
+//					}
+//						
+//			}
+			
 			addtoCheckoutReceipt();
 			System.out.println("Checkout another book? (y/n)");
 			yOrN = sc.nextLine();
 		}
 		printSearchMenu();
-//		String x = sc.nextLine();
-//		searchMenu(x);
-
 	}
 
 	public static void main(String[] args) {
 		myLibrary = Library.getLibrary();
+		welcomeMenu();
+		printMenu();
+		sc.close();
+	}
 
+	public static void welcomeMenu() {
 		System.out.println("Welcome to the best library in the world!");
 		System.out.println("Full of the rarest books in creation\n");
 		System.out.println("THE BILJAGANY LIBRARY!!!!\n");
 		System.out.println("What is your name?");
 		username = sc.nextLine();
-
-		printMenu();
-
 	}
 }
