@@ -17,20 +17,38 @@ import java.util.*;
 public class libraryApp {
 	static Scanner sc = new Scanner(System.in);
 	static ArrayList<Book> myLibrary;
-	static ArrayList<Book> checkOut = new ArrayList<Book>();
+	static ArrayList<Book> checkOut;
 	static String username;
+	
+	public static void welcomeMenu() {
+		System.out.println("Welcome to the best library in the world!");
+		System.out.println("Full of the rarest books in creation\n");
+		System.out.println("THE BILJAGANY LIBRARY!!!!\n");
+		System.out.println("What is your name?");
+		username = sc.nextLine();
+	}
+	
+	public static void printMenu() {
+		System.out.println("Hey " + username + " this is the Main Menu:");
+		System.out.println("1 - See Entire Catalog");
+		System.out.println("2 - Search");
+		System.out.println("3 - Bookcart");
+		System.out.println("4 - BilJaGamy's Picks");
+		System.out.println("5 - Exit");
+		System.out.print("\nEnter menu number: ");
+		optionMenu();
+	}
 
 	public static void optionMenu() {
 		String input = sc.nextLine();
 		while (true) {
 
-			switch (input) {
+		switch (input) {
 			case "1":
 				printLibrary();
 				break;
 			case "2":
 				printSearchMenu();
-
 				break;
 			case "3":
 				getBookcart();
@@ -48,7 +66,6 @@ public class libraryApp {
 			}
 			input = sc.nextLine();
 		}
-
 	}
 
 	public static void getBookcart() {
@@ -74,17 +91,6 @@ public class libraryApp {
 		System.out.println();
 		System.out.println("(x)=Book is checked out\n");
 		getCheckOut();
-	}
-
-	public static void printMenu() {
-		System.out.println("Hey " + username + " this is the Main Menu:");
-		System.out.println("1 - See Entire Catalog");
-		System.out.println("2 - Search");
-		System.out.println("3 - Bookcart");
-		System.out.println("4 - BilJaGamy's Picks");
-		System.out.println("5 - Exit");
-		System.out.print("\nEnter menu number: ");
-		optionMenu();
 	}
 
 	public static void printSearchMenu() {
@@ -123,7 +129,7 @@ public class libraryApp {
 			printMenu();
 			break;
 		default:
-			System.out.println("Enter a valid option, you peasant.\n");
+			System.out.println("Enter a valid option.\n");
 			printSearchMenu();
 			break;
 		}
@@ -165,7 +171,6 @@ public class libraryApp {
 				} else {
 					alpha.add(myLibrary.get(i).getBook());
 				}
-
 			}
 		}
 		String[] alphaArray = new String[alpha.size()];
@@ -256,7 +261,6 @@ public class libraryApp {
 				searchMenu();
 			}
 		}
-
 	}
 
 	public static void searchTitle() {
@@ -409,13 +413,5 @@ public class libraryApp {
 		welcomeMenu();
 		printMenu();
 		sc.close();
-	}
-
-	public static void welcomeMenu() {
-		System.out.println("Welcome to the best library in the world!");
-		System.out.println("Full of the rarest books in creation\n");
-		System.out.println("THE BILJAGANY LIBRARY!!!!\n");
-		System.out.println("What is your name?");
-		username = sc.nextLine();
 	}
 }
