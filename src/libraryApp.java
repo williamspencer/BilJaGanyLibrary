@@ -30,8 +30,7 @@ public class libraryApp {
 				break;
 			case "2":
 				printSearchMenu();
-				// String x = sc.nextLine();
-				// searchMenu(x);
+
 				break;
 			case "3":
 				getBookcart();
@@ -350,10 +349,8 @@ public class libraryApp {
 
 			out.close();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
@@ -398,36 +395,13 @@ public class libraryApp {
 					checkOut.add(myLibrary.get(i));
 					myLibrary.get(i).setCheckOut("true");
 				}
-//			else{
-//				System.out.println("I don't see that title baby. Here's our entire library. ");
-//				System.out.println("\n");
-//					printLibrary();
-//				}
-////				yOrN = sc.nextLine();
-//				if(yOrN.equalsIgnoreCase("y")){
-//					getCheckOut();
-//				}else{
-//					searchMenu();
-//				}
-					
-				}
-						
-//				if(!myLibrary.get(i).getTitle().equalsIgnoreCase(input)){
-//					System.out.println("We can't find that book honey bunches of oats.Try again(y/n):");
-//					yOrN = sc.nextLine();
-//					if(yOrN.equalsIgnoreCase("y")){
-//						getCheckOut();
-//					}else{
-//						searchMenu();
-//					}
-//						
-//			}
-			
+
 			addtoCheckoutReceipt();
 			System.out.println("Checkout another book? (y/n)");
 			yOrN = sc.nextLine();
-		}
+			}
 		printSearchMenu();
+		}
 	}
 
 	public static void main(String[] args) {
