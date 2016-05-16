@@ -15,7 +15,7 @@ public class Validator {
 	public static int getValidInt(int min, int max) {
 		int i = readValidInt();
 		while (i < min || i > max) {
-			System.out.print("Please put a number within range! (1-6): ");
+			System.out.print("Please enter a valid choice! (" + min + "-" + max + "): ");
 			i = readValidInt();
 		}
 		return i;

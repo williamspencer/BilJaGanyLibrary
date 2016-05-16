@@ -28,7 +28,7 @@ public class libraryApp {
 	}
 	
 	public static void printMenu() {
-		System.out.println("Hey " + username + " this is the Main Menu:");
+		System.out.println("Hello " + username + ", this is the Main Menu:");
 		System.out.println("1 - See Entire Catalog");
 		System.out.println("2 - Search");
 		System.out.println("3 - Bookcart");
@@ -146,7 +146,7 @@ public class libraryApp {
 		System.out.println("1.Nonfiction\n2.Fiction");
 		System.out.println("3.Childrens\n4.Reference\n");
 		System.out.print("What category are you interested in? (enter # 1-4): ");
-		int x = sc.nextInt();
+		int x = Validator.getValidInt(1, 4);
 		sc.nextLine();
 		String userInput = numToGenre(x);
 		ArrayList<String> alpha = new ArrayList<String>();
@@ -169,15 +169,7 @@ public class libraryApp {
 		}
 		if (alphaArray.length > 0) {
 			getCheckOut();
-		} else {
-			System.out.println("Not a valid entry! Try again?(y/n)");
-			String continueKeyword = sc.nextLine();
-			if (continueKeyword.equalsIgnoreCase("y")) {
-				searchGenre();
-			} else {
-				searchMenu();
-			}
-		}
+		} 
 	}
 
 	public static void searchLastName() {
