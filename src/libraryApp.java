@@ -60,7 +60,7 @@ public class libraryApp {
 				System.out.println("Goodbye!");
 				return;
 			default:
-				System.out.println("Enter a valid option, you peasant.\n");
+				System.out.println("Enter a valid option.\n");
 				printMenu();
 				break;
 			}
@@ -73,10 +73,6 @@ public class libraryApp {
 			System.out.println(p.getBook());
 		System.out.println();
 		printMenu();
-	}
-
-	public static void getCheckout() {
-		getBookcart();
 	}
 
 	public static void printLibrary() {
@@ -378,9 +374,9 @@ public class libraryApp {
 	}
 
 	public static void getCheckOut() {
-		System.out.println("\nWould you like to check out one of these books? (y/n):");
-		String yOrN = sc.nextLine();
-		while (yOrN.equalsIgnoreCase("y")) {
+		System.out.print("\nWould you like to check out one of these books? (y/n):");
+		String yOrN = Validator.readYorN("y", "n");
+		if (yOrN.equalsIgnoreCase("y")) {
 			System.out.print("Please enter the title of the book you want to checkout: ");
 
 			String input = sc.nextLine();
@@ -388,7 +384,7 @@ public class libraryApp {
 			for (int i = 0; i < myLibrary.size(); i++) {
 				if (myLibrary.get(i).getTitle().equalsIgnoreCase(input)
 						&& myLibrary.get(i).getCheckOut().equalsIgnoreCase("true")) {
-					System.out.println(
+					System.out.print(
 							"That book is already checked out sugar dumpling. Would you like to try it again?(y/n)");
 					yOrN = sc.nextLine();
 					if(yOrN.equalsIgnoreCase("y"))
@@ -401,11 +397,12 @@ public class libraryApp {
 				}
 
 			addtoCheckoutReceipt();
-			System.out.println("Checkout another book? (y/n)");
-			yOrN = sc.nextLine();
+			System.out.print("Checkout another book? (y/n)");
+			yOrN = Validator.readYorN("y", "n");
 			}
+		}else
 		printSearchMenu();
-		}
+		
 	}
 
 	public static void main(String[] args) {
