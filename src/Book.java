@@ -5,8 +5,23 @@ public class Book {
 		private String title;
 		private String lastName;
 		private String firstName;
-		public void printBook(String x)
-		{ 
+		private String genre;
+		private String checkOut;
+		
+		public Book(String a, String b, String c, String d, String x){
+			genre = a;
+			title = b;
+			firstName = c;
+			lastName = d;
+			checkOut = x;
+		}
+		public Book(String a, String b, String c, String d){
+			genre = a;
+			title = b;
+			firstName = c;
+			lastName = d;
+		}
+		public void printBook(String x){ 
 			System.out.println("\""+getTitle()+"\""+", by "+ getFirstName()+" "+getLastName() + x);
 		}
 		
@@ -41,21 +56,6 @@ public class Book {
 		public void setCheckOut(String x) {
 			checkOut = x;
 		}
-		private String genre;
-		private String checkOut;
-		
-		public Book(String a, String b, String c, String d, String x){
-			genre = a;
-			title = b;
-			firstName = c;
-			lastName = d;
-			checkOut = x;
-		}
-		public Book(String a, String b, String c, String d){
-			genre = a;
-			title = b;
-			firstName = c;
-			lastName = d;
-		}
+
 		
 }
